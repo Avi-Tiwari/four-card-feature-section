@@ -1,0 +1,160 @@
+/*
+=============== 
+Fonts
+===============
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+:root {
+  /* Primary */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  /* Grey color */
+  --darkGrey-1: hsl(234, 12%, 34%);
+  --mediumGrey: hsl(229, 6%, 66%);
+  --lightGrey: hsl(0, 0%, 98%);
+
+  --ff-primary: "Poppins", sans-serif;
+  --spacing: 0.25rem;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--ff-primary);
+  color: var(--mediumGrey);
+}
+.section {
+  padding: 3rem 3rem;
+}
+h1,
+h2 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: var(--darkGrey-1);
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.3rem;
+}
+footer {
+  text-align: center;
+}
+/*
+=============== 
+Heading
+===============
+*/
+.heading-center {
+  display: grid;
+  justify-items: center;
+}
+.heading {
+  text-align: center;
+  max-width: 556px;
+  padding-bottom: 3rem;
+}
+.first-heading {
+  font-weight: lighter;
+}
+@media screen and (max-width: 376px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.7rem;
+  }
+}
+
+/*
+=============== 
+Cards
+===============
+*/
+.cards-center {
+  display: grid;
+  justify-items: center;
+}
+
+.card-1,
+.card-2,
+.card-3,
+.card-4 {
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 4px;
+  min-width: 280px;
+  max-width: 330px;
+}
+.card-img {
+  text-align: right;
+}
+.card-message {
+  padding-bottom: 1rem;
+}
+.card-1 {
+  border-top: 4px solid var(--Cyan);
+}
+.card-2 {
+  border-top: 4px solid var(--Red);
+}
+.card-3 {
+  border-top: 4px solid var(--Orange);
+}
+.card-4 {
+  border-top: 4px solid var(--Blue);
+}
+.card{
+  transition: 0.2s;
+}
+.card:hover{
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 992px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: auto auto auto auto;
+    column-gap: 2rem;
+    grid-template-areas:
+      "a b c"
+      "d b e"
+      "d f e"
+      "g f h";
+  }
+  .card-1 {
+    grid-area: d;
+  }
+  .card-2 {
+    grid-area: b;
+  }
+  .card-3 {
+    grid-area: f;
+  }
+  .card-4 {
+    grid-area: e;
+  }
+}
