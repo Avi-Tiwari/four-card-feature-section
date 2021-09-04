@@ -42,6 +42,7 @@ body {
 }
 .section {
   padding: 3rem 3rem;
+  background: var(--lightGrey);
 }
 h1,
 h2 {
@@ -107,6 +108,7 @@ Cards
   border-radius: 4px;
   min-width: 280px;
   max-width: 330px;
+  background: white;
 }
 .card-img {
   text-align: right;
